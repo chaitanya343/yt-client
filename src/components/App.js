@@ -5,10 +5,10 @@ import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 
 class App extends React.Component {
-    state = { videos : [], selectedVideo : null, theme : 'grey' };
+    state = { videos : [], selectedVideo : null, theme : 'LightSlateGray' };
 
     componentDidMount () {
-        this.onTermSubmit('saiman says');
+        this.onTermSubmit('chilled cow');
     }
 
     onTermSubmit = async (term) => {
@@ -33,15 +33,15 @@ class App extends React.Component {
             <div style={{backgroundColor: this.state.theme}}>
                 <div className="ui container">
                     <h1>Chai's Youtube Web client</h1>
-                    Theme picker: <button class="ui teal basic button" onClick={()=>{this.setState({ theme: 'Black' })}}>Dark</button>
-                    <button class="ui teal basic button" onClick={()=>{this.setState({ theme: 'FloralWhite' })}}>Light</button>
-                    <button class="ui teal basic button" onClick={()=>{this.setState({ theme: 'Gainsboro' })}}>Gray</button>
+                    Theme picker: <button className="ui teal basic button" onClick={()=>{this.setState({ theme: 'Black' })}}>Dark</button>
+                    <button className="ui teal basic button" onClick={()=>{this.setState({ theme: 'FloralWhite' })}}>Light</button>
+                    <button className="ui teal basic button" onClick={()=>{this.setState({ theme: 'LightSlateGray' })}}>Gray</button>
                     <SearchBar onFormSubmit={this.onTermSubmit} theme={this.state.theme}/>
                     <br />
                     <div className='ui grid'>
                         <div className='ui grid'>
                             <div className='twelve wide column'>
-                                <VideoDetail video={this.state.selectedVideo} />
+                                <VideoDetail video={this.state.selectedVideo} theme={this.state.theme}/>
                             </div>
                             <div className='four wide column'>
                                 <VideoList 

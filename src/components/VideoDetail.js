@@ -13,11 +13,11 @@ const VideoDetail = props => {
             <div className='ui embed'>
                 <iframe src={videoEmbedSrc} title='video player'/>
             </div>
-            <div className='ui segment' style={{backgroundColor: props.theme}}>
+            <div className='ui segment' style={{backgroundColor: props.theme}} >
                 <h4 className='ui header'>{props.video.snippet.title}</h4>
                 <p>{props.video.snippet.description}</p>
-                <a class="ui black basic button" href={videoSrc}>Visit this channel on youtube.com</a><br/><br/>
-                <a class="ui black basic button" href={videoSrc}>Watch this video on youtube.com</a>
+                <a className="ui black basic button" href={videoSrc}>Visit this channel on youtube.com</a><br/><br/>
+                <a className="ui black basic button" href={videoSrc}>Watch this video on youtube.com</a>
             </div>
         </div>
     );
