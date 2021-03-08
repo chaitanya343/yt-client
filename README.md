@@ -6,6 +6,8 @@ So I waste a lot of time on Youtube, much like everyone. I start coming to youtu
 
 The web client is deployed on Netlify here : https://jovial-jackson-43cb74.netlify.app/
 
+### Preview
+<img src="https://github.com/chaitanya343/yt-client/blob/main/myYtClient.png" width="700" height="100%">
 
 ===============================================
 
